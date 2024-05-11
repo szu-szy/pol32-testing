@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import { Post } from "../Post/Post";
+import { PostForm } from "../PostForm/PostForm";
 
-type PostType = {
+export type PostType = {
   id: number;
   title: string;
 };
@@ -23,17 +24,22 @@ export const PostList = () => {
     }
   };
 
+  const addPost = (post: PostType) => setPosts((prev) => [...prev, post]);
+
   useEffect(() => {
     getPosts();
   }, []);
 
   return posts.length > 0 ? (
-    <ul>
-      {posts.map((post) => (
-        <Post key={post.id} {...post} />
-      ))}
-    </ul>
+    <>
+      <PostForm addPost={addPost} />
+      <ul>
+        {posts.map((post) => (
+          <Post key={post.id} {...post} />
+        ))}
+      </ul>
+    </>
   ) : (
-    "Brak informacji o postach"
+    <h1>"Brak informacji o postach"</h1>
   );
 };
