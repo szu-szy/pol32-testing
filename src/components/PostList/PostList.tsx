@@ -26,6 +26,16 @@ export const PostList = () => {
 
   const addPost = (post: PostType) => setPosts((prev) => [...prev, post]);
 
+  const updatePost = (updatedPost: PostType) => {
+    setPosts((prev) =>
+      prev.map((post) => {
+        if (updatedPost.id !== post.id) return post;
+
+        return updatedPost;
+      })
+    );
+  };
+
   useEffect(() => {
     getPosts();
   }, []);
@@ -35,7 +45,7 @@ export const PostList = () => {
       <PostForm addPost={addPost} />
       <ul>
         {posts.map((post) => (
-          <Post key={post.id} {...post} />
+          <Post key={post.id} updatePost={updatePost} {...post} />
         ))}
       </ul>
     </>
