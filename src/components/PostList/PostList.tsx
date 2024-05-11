@@ -36,6 +36,10 @@ export const PostList = () => {
     );
   };
 
+  const deletePostByID = (id: number) => {
+    setPosts((prev) => prev.filter((post) => post.id !== id));
+  };
+
   useEffect(() => {
     getPosts();
   }, []);
@@ -45,7 +49,12 @@ export const PostList = () => {
       <PostForm addPost={addPost} />
       <ul>
         {posts.map((post) => (
-          <Post key={post.id} updatePost={updatePost} {...post} />
+          <Post
+            key={post.id}
+            updatePost={updatePost}
+            deletePostByID={deletePostByID}
+            {...post}
+          />
         ))}
       </ul>
     </>
