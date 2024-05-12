@@ -58,7 +58,7 @@ Edytuj komponent PostList tak aby kazdy element Post posiadał przycisk umozliwi
 
 - Utwórz komponent User który będzie wypisywał informacje o pojedyńczym użytkowniku
 - Komponent User powinien odczytywac id przekazane przez parametry URL
-- Utwórz nawigacje do strony User w pliku App.tsx uwzględniając zagnieżdzenie w <Router> i parametr id w scieżce
+- Utwórz nawigacje do strony User w pliku App.tsx uwzględniając parametr id w scieżce
 
 3. Przekierowanie 
 
@@ -73,7 +73,7 @@ Projekt: Menedżer Użytkowników
 
 Celem projektu jest stworzenie aplikacji webowej, która umożliwia zarządzanie listą użytkowników. Aplikacja będzie korzystać z zewnętrznego API do pobierania, tworzenia, aktualizowania i usuwania danych o użytkownikach.
 
-Funkcjonalności:
+- Funkcjonalności:
 
 Lista użytkowników: Użytkownik będzie mógł wyświetlić listę wszystkich zarejestrowanych użytkowników w systemie.
 
@@ -87,24 +87,27 @@ Usuwanie użytkownika: Użytkownik będzie mógł usunąć istniejącego użytko
 
 Nawigacja: Aplikacja będzie posiadać kilka stron, między którymi użytkownik będzie mógł się przemieszczać za pomocą React Router.
 
-Technologie:
+- Technologie:
 
 React: Aplikacja będzie zbudowana przy użyciu biblioteki React, wykorzystując komponenty funkcyjne.
 React Router: Do obsługi nawigacji między stronami aplikacji.
 Fetch API: Do komunikacji z zewnętrznym API i pobierania, tworzenia, aktualizowania oraz usuwania danych o użytkownikach.
 React Context lub Redux: Do zarządzania stanem aplikacji (np. przechowywania listy użytkowników, wybranego użytkownika, etc.).
-Struktura projektu:
+
+- Struktura projektu:
 
 Strona główna: Zawiera listę wszystkich użytkowników.
 Strona szczegółów użytkownika: Wyświetla szczegółowe informacje o wybranym użytkowniku.
 Strona dodawania użytkownika: Zawiera formularz do dodawania nowego użytkownika.
 Strona edycji użytkownika: Zawiera formularz do edycji danych istniejącego użytkownika.
-Komponenty:
+
+- Komponenty:
 UserList: Komponent wyświetlający listę użytkowników.
 UserDetails: Komponent wyświetlający szczegóły wybranego użytkownika.
 UserForm: Komponent zawierający formularz do dodawania lub edycji użytkownika.
 Navigation: Komponent odpowiedzialny za nawigację między stronami.
-Przykładowy przebieg:
+
+- Przykładowy przebieg:
 
 Użytkownik przegląda listę wszystkich użytkowników na stronie głównej.
 Użytkownik klika na wybranego użytkownika, co powoduje przekierowanie do strony UserDetails za pomocą React Router.
