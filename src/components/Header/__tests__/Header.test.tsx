@@ -2,6 +2,7 @@ import { render, screen } from "@testing-library/react";
 import { Header } from "../Header";
 
 describe("Header", () => {
+  // zapis it - biblioteka Jest, zapis test - biblioteka react testing library
   it("Header renders correctly", () => {
     // krok 1 - wyrenderowac komponent
     render(<Header />);
